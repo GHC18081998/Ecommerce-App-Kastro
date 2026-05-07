@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: ecommerce-app
-        image: maheesh1/sample-webap:latest
+        image: maheesh1/sample-webap:2
         imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
