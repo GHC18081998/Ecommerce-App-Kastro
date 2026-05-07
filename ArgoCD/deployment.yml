@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swiggy-app
+  name: ecommerce-app
   labels:
-    app: swiggy-app
+    app: ecommerce-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: swiggy-app
+      app: ecommerce-app
   template:
     metadata:
       labels:
-        app: swiggy-app
+        app: ecommerce-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: swiggy-app
-        image: maheesh1/swiggyapp:latest
+      - name: ecommerce-app
+        image: maheesh1/ecommerce-app:latest
         imagePullPolicy: "Always"
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
